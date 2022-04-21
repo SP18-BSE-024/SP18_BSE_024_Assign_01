@@ -7,37 +7,32 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 
-public class ClaculateFragment extends Fragment {
-    private TextView tv;
+public class InputFragment extends Fragment {
 
-    public ClaculateFragment() {
 
+
+    public InputFragment() {
+        // Required empty public constructor
     }
 
 
-    public static ClaculateFragment newInstance() {
-        ClaculateFragment fragment = new ClaculateFragment();
+    public static InputFragment newInstance() {
+        InputFragment fragment = new InputFragment();
         Bundle args = new Bundle();
-
-        fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v= inflater.inflate(R.layout.fragment_claculate, container, false);
-        tv=v.findViewById(R.id.cal_tex);
-        return v;
+        return inflater.inflate(R.layout.fragment_input, container, false);
     }
 }

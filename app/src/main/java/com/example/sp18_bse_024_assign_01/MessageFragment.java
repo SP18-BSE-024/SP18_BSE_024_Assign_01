@@ -17,7 +17,7 @@ public class MessageFragment extends Fragment {
     }
 
 
-    public static MessageFragment newInstance(String param1, String param2) {
+    public static MessageFragment newInstance() {
         MessageFragment fragment = new MessageFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
