@@ -16,8 +16,9 @@ import android.widget.TextView;
 
 public class ActionFragment extends Fragment {
 
-    private Button input,calculate;
+    private Button input1,calculate;
     private Todo listener;
+    private Data d;
 
     public ActionFragment() {
         // Required empty public constructor
@@ -41,14 +42,21 @@ public class ActionFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.fragment_action, container, false);
-        input=v.findViewById(R.id.calculate);
-        input.setOnClickListener(new View.OnClickListener() {
+        input1=v.findViewById(R.id.input);
+        input1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                input(1);
+            }
+        });
+        calculate=v.findViewById(R.id.calculate);
+        calculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    input(2);
 
             }
         });
-
 
 
 
@@ -69,9 +77,11 @@ public class ActionFragment extends Fragment {
         }
     }
     public interface Todo{
-        public void startInput();
-        public void calculate();
+        public void startInput(int i);
 
 
+    }
+    public void input(int i){
+        listener.startInput(i);
     }
 }

@@ -1,14 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cal"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ClaculateFragment" >
+    tools:context=".ClaculateFragment">
 
     <TextView
-        android:id="@+id/cal_tex"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-</FrameLayout>
+        android:id="@+id/num1"
+        android:layout_width="216dp"
+        android:layout_height="38dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/addres"
+        android:layout_width="215dp"
+        android:layout_height="39dp"
+        android:text="Add Result is"
+        app:layout_constraintTop_toBottomOf="@+id/num1" />
+
+    <TextView
+        android:id="@+id/subres"
+        android:layout_width="214dp"
+        android:layout_height="38dp"
+        android:text="Subtraction Result is"
+        app:layout_constraintTop_toBottomOf="@+id/addres"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/multires"
+        android:layout_width="218dp"
+        android:layout_height="41dp"
+        android:text="Multiplication Result is "
+        app:layout_constraintTop_toBottomOf="@+id/subres" />
+
+    <TextView
+        android:id="@+id/divres"
+        android:layout_width="209dp"
+        android:layout_height="40dp"
+        android:text="Division Result Is"
+        app:layout_constraintTop_toBottomOf="@+id/multires" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="66dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="32dp"
+        android:text="Add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divres" />
+
+    <Button
+        android:id="@+id/subtract"
+        android:layout_width="123dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="SUBTRACT"
+        app:layout_constraintStart_toEndOf="@+id/add"
+        app:layout_constraintTop_toBottomOf="@+id/divres" />
+
+    <Button
+        android:id="@+id/multiply"
+        android:layout_width="96dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        android:text="Multiply"
+        app:layout_constraintStart_toEndOf="@+id/subtract"
+        app:layout_constraintTop_toBottomOf="@+id/divres" />
+
+    <Button
+        android:id="@+id/divide"
+        android:layout_width="95dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        android:text="Divide"
+        app:layout_constraintStart_toEndOf="@+id/multiply"
+        app:layout_constraintTop_toBottomOf="@+id/divres" />
+</androidx.constraintlayout.widget.ConstraintLayout>

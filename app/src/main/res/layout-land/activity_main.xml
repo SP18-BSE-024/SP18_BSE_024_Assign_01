@@ -8,15 +8,15 @@
 
     <FrameLayout
         android:id="@+id/F1"
-        android:layout_width="370dp"
+        android:layout_width="198dp"
         android:layout_height="409dp">
 
     </FrameLayout>
 
     <FrameLayout
         android:id="@+id/F2"
-        android:layout_width="361dp"
-        android:layout_height="413dp">
+        android:layout_width="530dp"
+        android:layout_height="match_parent">
 
     </FrameLayout>
 
